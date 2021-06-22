@@ -4,6 +4,8 @@ provider "aws" {
 resource "aws_instance" "example" {
   ami           = "ami-02bcbb802e03574ba"
   instance_type = "t2.micro"
+}
+
 module "vpc" {
   source  = "laurenrother/vpc/aws"
   version = "3.1.1"
@@ -21,7 +23,6 @@ module "vpc" {
     Terraform = "true"
     Environment = "dev"
   }
-}
 }
 
 # Adding a comment, any comment
