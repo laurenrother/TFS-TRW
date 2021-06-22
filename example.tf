@@ -7,7 +7,7 @@ resource "aws_instance" "example" {
 }
 
 module "vpc" {
-  source  = "laurenrother/vpc/aws"
+  source  = "https://tf-registry-staging.herokuapp.com/modules/laurenrother/vpc/aws"
   version = "3.1.1"
   name = "my-vpc"
   cidr = "10.0.0.0/16"
